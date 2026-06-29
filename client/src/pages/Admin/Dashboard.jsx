@@ -24,7 +24,7 @@ const Dashboard = () => {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/appointments");
+      const res = await axios.get("http://https://celeb-dental-system.onrender.com/api/appointments");
       setAppointments(res.data.appointments);
     } catch (err) {
       console.log(err);

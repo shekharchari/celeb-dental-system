@@ -12,7 +12,7 @@ function Doctors() {
   const fetchDoctors = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/doctors"
+        "http://https://celeb-dental-system.onrender.com/api/doctors"
       );
 
       setDoctors(res.data.doctors);
@@ -47,7 +47,7 @@ function Doctors() {
               className="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 transition duration-300"
             >
               <img
-                src={`http://localhost:5000${doctor.image}`}
+                src={`http://https://celeb-dental-system.onrender.com${doctor.image}`}
                 alt={doctor.name}
                 className="w-full h-80 object-cover"
               />

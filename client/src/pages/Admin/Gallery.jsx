@@ -8,7 +8,7 @@ const Gallery = () => {
 
   const fetchGallery = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/gallery");
+      const res = await axios.get("http://https://celeb-dental-system.onrender.com/api/gallery");
       setGallery(res.data.images);
     } catch (err) {
       console.log(err);
@@ -26,7 +26,7 @@ const Gallery = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/gallery",
+        "http://https://celeb-dental-system.onrender.com/api/gallery",
         {
           image: image,
         }
@@ -48,7 +48,7 @@ const Gallery = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/gallery/${id}`
+        `http://https://celeb-dental-system.onrender.com/api/gallery/${id}`
       );
 
       fetchGallery();
@@ -68,7 +68,7 @@ const Gallery = () => {
 
         {image && (
           <img
-            src={`http://localhost:5000${image}`}
+            src={`http://https://celeb-dental-system.onrender.com${image}`}
             alt="Preview"
             className="mt-6 w-40 h-40 rounded-xl object-cover border"
           />
@@ -89,7 +89,7 @@ const Gallery = () => {
             className="bg-white rounded-xl shadow-lg p-4"
           >
             <img
-              src={`http://localhost:5000${item.image}`}
+              src={`http://https://celeb-dental-system.onrender.com${item.image}`}
               alt="Gallery"
               className="w-full h-48 object-cover rounded-lg"
             />

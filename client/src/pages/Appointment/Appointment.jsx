@@ -22,7 +22,7 @@ const Appointment = () => {
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/appointments",
+      "http://https://celeb-dental-system.onrender.com/api/appointments",
       form
     );
 

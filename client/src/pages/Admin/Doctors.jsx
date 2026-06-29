@@ -19,7 +19,7 @@ const Doctors = () => {
 
   const fetchDoctors = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/doctors");
+      const res = await axios.get("http://https://celeb-dental-system.onrender.com/api/doctors");
       setDoctors(res.data.doctors);
     } catch (err) {
       console.log(err);
@@ -42,7 +42,7 @@ const Doctors = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/doctors",
+        "http://https://celeb-dental-system.onrender.com/api/doctors",
         form
       );
 
@@ -68,7 +68,7 @@ const Doctors = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/doctors/${id}`
+        `http://https://celeb-dental-system.onrender.com/api/doctors/${id}`
       );
 
       fetchDoctors();
@@ -131,7 +131,7 @@ const Doctors = () => {
 
             {form.image && (
               <img
-                src={`http://localhost:5000${form.image}`}
+                src={`http://https://celeb-dental-system.onrender.com${form.image}`}
                 alt="Doctor"
                 className="mt-4 w-32 h-32 rounded-lg border object-cover"
               />
@@ -171,7 +171,7 @@ const Doctors = () => {
                 <td className="px-6 py-4 text-center">
                   {doctor.image ? (
                     <img
-                      src={`http://localhost:5000${doctor.image}`}
+                      src={`http://https://celeb-dental-system.onrender.com${doctor.image}`}
                       alt={doctor.name}
                       className="w-16 h-16 rounded-full object-cover mx-auto border"
                     />
