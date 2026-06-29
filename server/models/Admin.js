@@ -14,7 +14,7 @@ const adminSchema = new mongoose.Schema({
 
   email: {
     type: String,
-    default: "admin@celebritydental.com",
+    default: "shekharchari709@gmail.com",
   },
 
   otp: {
