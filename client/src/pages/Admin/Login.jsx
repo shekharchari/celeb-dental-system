@@ -185,7 +185,7 @@ const Login = () => {
             {/* Forgot Password Link */}
             <div className="text-right">
               <button
-                onClick={() => setMode("forgot")}
+                onClick={() => { setMode("forgot"); setLoading(false); }}
                 className="text-sm font-semibold text-teal-600 hover:text-teal-700 transition"
               >
                 Forgot Password?
@@ -232,7 +232,7 @@ const Login = () => {
             </button>
 
             <button
-              onClick={() => setMode("login")}
+              onClick={() => { setMode("login"); setLoading(false); }}
               className="w-full text-center text-sm font-semibold text-gray-500 hover:text-gray-700 transition"
             >
               Back to Login
@@ -268,7 +268,7 @@ const Login = () => {
             </button>
 
             <button
-              onClick={() => setMode("forgot")}
+              onClick={() => { setMode("forgot"); setLoading(false); }}
               className="w-full text-center text-sm font-semibold text-gray-500 hover:text-gray-700 transition"
             >
               Back
