@@ -18,7 +18,7 @@ const ImageUpload = ({ onUpload }) => {
       setLoading(true);
 
       const res = await axios.post(
-        "http://https://celeb-dental-system.onrender.com/api/upload",
+        "https://celeb-dental-system.onrender.com/api/upload",
         formData,
         {
           headers: {

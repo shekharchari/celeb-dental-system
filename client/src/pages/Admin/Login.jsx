@@ -44,8 +44,10 @@ const Login = () => {
 
       navigate("/dashboard");
     } catch (err) {
-      alert(err.response?.data?.message || "Login Failed");
-    }
+  console.log(err);
+  console.log(err.response?.data);
+  alert(JSON.stringify(err.response?.data || err.message));
+}
   };
 
   return (

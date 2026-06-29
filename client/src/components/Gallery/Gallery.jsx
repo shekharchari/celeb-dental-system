@@ -11,7 +11,7 @@ function Gallery() {
   const fetchGallery = async () => {
     try {
       const res = await axios.get(
-        "http://https://celeb-dental-system.onrender.com/api/gallery"
+        "https://celeb-dental-system.onrender.com/api/gallery"
       );
 
       setGallery(res.data.images);
@@ -44,7 +44,7 @@ function Gallery() {
               className="overflow-hidden rounded-3xl shadow-lg"
             >
               <img
-                src={`http://https://celeb-dental-system.onrender.com${item.image}`}
+                src={`https://celeb-dental-system.onrender.com${item.image}`}
                 alt="Gallery"
                 className="w-full h-72 object-cover hover:scale-110 transition duration-500"
               />

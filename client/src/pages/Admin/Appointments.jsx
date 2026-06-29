@@ -7,7 +7,7 @@ const Appointments = () => {
 
   const fetchAppointments = async () => {
     try {
-      const res = await axios.get("http://https://celeb-dental-system.onrender.com/api/appointments");
+      const res = await axios.get("https://celeb-dental-system.onrender.com/api/appointments");
       setAppointments(res.data.appointments);
     } catch (err) {
       console.log(err);
@@ -24,7 +24,7 @@ const Appointments = () => {
 
     try {
       const res = await axios.delete(
-        `http://https://celeb-dental-system.onrender.com/api/appointments/${id}`
+        `https://celeb-dental-system.onrender.com/api/appointments/${id}`
       );
 
       alert(res.data.message);
@@ -38,7 +38,7 @@ const Appointments = () => {
   const updateStatus = async (id, status) => {
     try {
       const res = await axios.put(
-        `http://https://celeb-dental-system.onrender.com/api/appointments/${id}`,
+        `https://celeb-dental-system.onrender.com/api/appointments/${id}`,
         { status }
       );
 
