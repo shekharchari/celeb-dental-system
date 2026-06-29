@@ -1,4 +1,4 @@
-import { FaPhoneAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaCalendarAlt, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -65,6 +65,14 @@ function Navbar() {
           >
             <FaCalendarAlt />
             Book Appointment
+          </Link>
+
+          <Link
+            to="/admin"
+            className="flex items-center gap-2 border border-teal-700 text-teal-700 px-5 py-3 rounded-full hover:bg-teal-50 transition"
+          >
+            <FaUser />
+            Admin Login
           </Link>
 
         </div>
