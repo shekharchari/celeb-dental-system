@@ -34,7 +34,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://https://celeb-dental-system.onrender.com/api/admin/login",
+        "https://celeb-dental-system.onrender.com/api/admin/login",
         form
       );
 
