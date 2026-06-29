@@ -42,18 +42,26 @@ const ImageUpload = ({ onUpload }) => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-dashed border-slate-300">
       <input
         type="file"
         accept="image/*"
         onChange={(e) => setImage(e.target.files[0])}
+        className="block w-full text-sm text-slate-500
+          file:mr-4 file:py-2.5 file:px-5
+          file:rounded-xl file:border-0
+          file:text-sm file:font-semibold
+          file:bg-teal-50 file:text-teal-700
+          hover:file:bg-teal-100/80 transition duration-200 cursor-pointer"
       />
 
       <button
+        type="button"
         onClick={uploadImage}
-        className="bg-blue-600 text-white px-4 py-2 rounded"
+        disabled={loading}
+        className="w-full sm:w-auto bg-teal-600 hover:bg-teal-700 text-white py-2.5 px-6 rounded-xl font-bold text-sm shadow-md shadow-teal-600/10 transition duration-200 disabled:bg-teal-400 cursor-pointer whitespace-nowrap"
       >
-        {loading ? "Uploading..." : "Upload Image"}
+        {loading ? "Uploading..." : "Upload Photo"}
       </button>
     </div>
   );
