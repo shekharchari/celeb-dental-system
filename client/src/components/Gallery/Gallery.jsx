@@ -3,6 +3,7 @@ import axios from "axios";
 
 function Gallery() {
   const [gallery, setGallery] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchGallery();
@@ -10,6 +11,7 @@ function Gallery() {
 
   const fetchGallery = async () => {
     try {
+      setLoading(true);
       const res = await axios.get(
         "https://celeb-dental-system.onrender.com/api/gallery"
       );
@@ -17,6 +19,8 @@ function Gallery() {
       setGallery(res.data.images);
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -38,18 +42,28 @@ function Gallery() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
 
-          {gallery.map((item) => (
-            <div
-              key={item._id}
-              className="overflow-hidden rounded-3xl shadow-lg"
-            >
-              <img
-                src={`https://celeb-dental-system.onrender.com${item.image}`}
-                alt="Gallery"
-                className="w-full h-72 object-cover hover:scale-110 transition duration-500"
+          {loading ? (
+            // Gallery Skeletons
+            [1, 2, 3, 4, 5, 6].map((n) => (
+              <div
+                key={n}
+                className="w-full h-72 bg-slate-200 animate-pulse rounded-3xl"
               />
-            </div>
-          ))}
+            ))
+          ) : (
+            gallery.map((item) => (
+              <div
+                key={item._id}
+                className="overflow-hidden rounded-3xl shadow-lg"
+              >
+                <img
+                  src={`https://celeb-dental-system.onrender.com${item.image}`}
+                  alt="Gallery"
+                  className="w-full h-72 object-cover hover:scale-110 transition duration-500"
+                />
+              </div>
+            ))
+          )}
 
         </div>
 
