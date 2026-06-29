@@ -6,7 +6,8 @@ import {
   FaImages, 
   FaGlobe, 
   FaSignOutAlt, 
-  FaTooth 
+  FaTooth,
+  FaCog
 } from "react-icons/fa";
 
 const AdminLayout = () => {
@@ -22,6 +23,7 @@ const AdminLayout = () => {
     { to: "/appointments", label: "Appointments", icon: <FaCalendarAlt /> },
     { to: "/doctors", label: "Doctors", icon: <FaUserMd /> },
     { to: "/gallery", label: "Gallery", icon: <FaImages /> },
+    { to: "/settings", label: "Settings", icon: <FaCog /> },
     { to: "/", label: "View Website", icon: <FaGlobe /> },
   ];
 

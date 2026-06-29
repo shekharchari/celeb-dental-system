@@ -9,6 +9,7 @@ import Dashboard from "./pages/Admin/Dashboard";
 import Appointments from "./pages/Admin/Appointments";
 import Doctors from "./pages/Admin/Doctors";
 import AdminLayout from "./pages/Admin/AdminLayout";
+import Settings from "./pages/Admin/Settings";
 
 function App() {
   return (
@@ -44,16 +45,18 @@ function App() {
         >
           <Route index element={<Appointments />} />
         </Route>
+
+        {/* Gallery */}
         <Route
-  path="/gallery"
-  element={
-    <ProtectedRoute>
-      <AdminLayout />
-    </ProtectedRoute>
-  }
->
-  <Route index element={<Gallery />} />
-</Route>
+          path="/gallery"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Gallery />} />
+        </Route>
 
         {/* Doctors */}
         <Route
@@ -65,6 +68,18 @@ function App() {
           }
         >
           <Route index element={<Doctors />} />
+        </Route>
+
+        {/* Settings */}
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
