@@ -40,6 +40,22 @@ const Appointment = () => {
 
       alert(res.data.message);
 
+      // Construct the WhatsApp message with appointment details
+      const formattedDate = new Date(form.appointmentDate).toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+
+      const messageText = `Hello Celebrity Dental, I just booked an appointment on your website!\n\n📋 *APPOINTMENT DETAILS:*\n👤 *Patient Name:* ${form.fullName}\n📞 *Phone Number:* ${form.phone}\n📅 *Date:* ${formattedDate}\n🦷 *Treatment:* ${form.treatment}\n💬 *Message:* ${form.message || "None"}`;
+
+      const encodedMessage = encodeURIComponent(messageText);
+      const whatsappUrl = `https://wa.me/919392898492?text=${encodedMessage}`;
+
+      // Open WhatsApp in a new tab
+      window.open(whatsappUrl, "_blank");
+
       setForm({
         fullName: "",
         phone: "",
