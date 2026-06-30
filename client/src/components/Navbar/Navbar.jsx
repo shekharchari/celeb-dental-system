@@ -49,11 +49,11 @@ function Navbar() {
         </nav>
 
         {/* Buttons */}
-        <div className="flex gap-3">
+        <div className="flex gap-2 text-sm font-semibold">
 
           <a
             href="tel:9392898492"
-            className="hidden md:flex items-center gap-2 border border-teal-700 text-teal-700 px-5 py-3 rounded-full hover:bg-teal-700 hover:text-white transition"
+            className="hidden md:flex items-center gap-2 border border-teal-700 text-teal-700 px-4 py-2 rounded-full hover:bg-teal-700 hover:text-white transition"
           >
             <FaPhoneAlt />
             93928 98492
@@ -61,7 +61,7 @@ function Navbar() {
 
           <Link
             to="/appointment"
-            className="flex items-center gap-2 bg-teal-700 text-white px-5 py-3 rounded-full hover:bg-teal-800 transition"
+            className="flex items-center gap-2 bg-teal-700 text-white px-4 py-2 rounded-full hover:bg-teal-800 transition"
           >
             <FaCalendarAlt />
             Book Appointment
@@ -69,7 +69,7 @@ function Navbar() {
 
           <Link
             to="/admin"
-            className="flex items-center gap-2 border border-teal-700 text-teal-700 px-5 py-3 rounded-full hover:bg-teal-50 transition"
+            className="flex items-center gap-2 border border-teal-700 text-teal-700 px-4 py-2 rounded-full hover:bg-teal-50 transition"
           >
             <FaUser />
             Admin Login
